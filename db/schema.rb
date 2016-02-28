@@ -11,19 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160224191112) do
+ActiveRecord::Schema.define(version: 20160224193317) do
 
   create_table "products", force: :cascade do |t|
-    t.string   "title"
-    t.text     "discription"
-    t.decimal  "size"
-    t.decimal  "price"
-    t.boolean  "is_spicy"
-    t.boolean  "is_veg"
-    t.boolean  "is_best_offer"
-    t.string   "urlimage"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string  "title"
+    t.text    "discription"
+    t.decimal "size"
+    t.decimal "price"
+    t.boolean "is_spicy"
+    t.boolean "is_veg"
+    t.boolean "is_best_offer"
+    t.string  "urlimage"
   end
 
 end

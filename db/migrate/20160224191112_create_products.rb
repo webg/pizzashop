@@ -10,9 +10,7 @@ class CreateProducts < ActiveRecord::Migration
   		i.boolean :is_best_offer
   		i.string :urlimage
 
-  		i.timestamps
-
-
+  		
   	end
   end
 end
