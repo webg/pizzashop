@@ -11,3 +11,8 @@ function something()
 		alert(x);
 		
 	}
+
+function my_add_to_cart(title)
+	{
+		alert('Вы добавили пицу ' + title);
+	}

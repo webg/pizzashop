@@ -2,7 +2,7 @@
 <div class="row">
 	<% @products.each do |p| %>
 
-		<div class="col-md-6">
+		<div class="col-md-3">
 		  	<div>
 		  		<%= p.title %>
 		  	</div>
@@ -14,6 +14,16 @@
 		  	<div>
 		  		<%= p.discription %>
 		  	</div>
+		  	<div>
+		  		Size: <%= p.size %> cm
+		  	</div>
+		  	<div>
+		  		Price: <%= p.price %> руб.
+		  	</div>
+		  	<div>
+		  		<button class="btn btn-success btn-sm" onclick="my_add_to_cart('<%= p.title %>')">Добавить в корзину</button>
+		  	</div>
+
 		</div>
 
 	<% end %>
