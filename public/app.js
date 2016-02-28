@@ -1,18 +1,15 @@
 
-function something()
+function add_to_cart(id)
 	{
-		
-		var x = window.localStorage.getItem('aaa');
+		var key = 'product_' + id
+
+		var x = window.localStorage.getItem(key);
 
 		x = x * 1 + 1;
 		
-		window.localStorage.setItem('aaa', x);
+		window.localStorage.setItem(key, x);
 		
-		alert(x);
-		
+			
 	}
 
-function my_add_to_cart(title)
-	{
-		alert('Вы добавили пицу ' + title);
-	}
+
