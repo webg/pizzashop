@@ -9,13 +9,17 @@ function add_to_cart(id)
 		
 		window.localStorage.setItem(key, x);
 		
-		alert('Вы заказали:' + cart_get_number_of_items());	
+		update_orders_input();	
 	}
 
-
-function cart_get_number_of_items()
+function update_orders_input()
 {
-	var cnt = 0;
+	var orders = cart_get_orders();
+	$('#orders_input').val(orders);
+}
+function cart_get_orders()
+{
+	var orders = '';
 	
 	for(var i=0; i < window.localStorage.length; i++)
 	{
@@ -24,9 +28,9 @@ function cart_get_number_of_items()
 		
 		if (key.indexOf('product_') == 0)
 		{
-			cnt = cnt + value * 1;
+			orders = orders + key + '=' +value + ',';
 		}
 	}
 
-	return cnt;
+	return orders;
 }
